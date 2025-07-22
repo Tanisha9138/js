@@ -2,7 +2,7 @@
 
 // But modern or u can say that mid modern languages like js, you are not given so much control over memory there, automatic garbage collection etc. all these things are there.
 
-// Now see hpw memory allocation happens
+// Now see how memory allocation happens
 
 // Stack(Primitive) and Heap(Non Primitive)
 
