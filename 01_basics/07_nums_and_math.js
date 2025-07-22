@@ -64,7 +64,7 @@ console.log(Math.random());
 console.log((Math.random()* 10) + 1);
 
 
-// important formula
+// important formula to remember
 
 const min = 10;
 const max = 20;
