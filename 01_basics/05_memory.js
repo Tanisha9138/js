@@ -1,3 +1,6 @@
+// Memory work in Js
+
+
 // When we use early language like C etc, then what happens there is that reserving memory and freeing memory both are our work as a programmer
 
 // But modern or u can say that mid modern languages like js, you are not given so much control over memory there, automatic garbage collection etc. all these things are there.
