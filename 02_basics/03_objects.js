@@ -64,3 +64,27 @@ jsUser.greetingTwo = function(){
     console.log(`Hello Js User, ${this.name}`);
 }
 console.log(jsUser.greetingTwo());
+
+
+
+// Destructuring of Objects
+
+const course = {
+    coursename: "about javaScript",
+    price: "999",
+    courseInstructor: "Tanisha"
+}
+
+// use
+// course.courseInstructor
+
+// Suppose we have to print this value 3 times we don't write again and again same console line bcz it looks weird.
+// So we use another syntax
+
+const {courseInstructor} = course;
+console.log(courseInstructor);
+
+// Modify the name
+
+const {courseInstructor: instructor} = course;
+console.log(instructor)
