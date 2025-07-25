@@ -1,0 +1,60 @@
+Now we talk about how the code is executed inside JavaScript.
+
+1.> Execution Context
+2.> Call Stack
+
+
+=>1.>JavaScript Execution Context =>  Whatever file you have created, how will the script run it, how will it executed it
+ First Global Execution Context is created, then it is referred to a variable (this).
+
+// Now, how do the interview questions come here,
+
+Suppose if you have run it in your browser, then the global Execution Context of the browser is a little different from node js environment
+so Execution Context of every environment is different
+
+// So if the Execution Context of browser's is mostly important then the value of (this) in the window object
+
+
+// Global Execution Context is there, whether there is a value in it or not, that is a different matter
+// Now it is completely executed inside a thread.
+
+JavaScript is a single threaded. Inside Js everything is a process
+
+
+//2.> Functional Execution Context
+//3.> Eval Execution Context => It is a property of the global object   No need of discussion just know that it is also exists
+
+
+JavaScript code actually runs in two phase
+1.> Memory Creation Phase
+2.> Execution Phase
+
+In Memory creation phase Whatever we declared variable, there is a space allocated for them. 
+They are not executed Whatever mathematical function we have written plus, minus, multiply none of that happens here, they happens in Execution phase only
+
+// let understand with an example
+
+let val1 = 10
+let val2 = 5
+function addNum(num1,num2) {
+    let total = num1 + num2
+    return total
+}
+let result1 = addNum(val1,val2)
+let result2 = addNum(10,2)
+
+
+1.>First of all Whatever code has to be run no matter how big or small it was, it is run by global Execution and it is located first of all inside this.
+2.>Memory Phase
+    val1 -> undefined
+    val2 -> undefined
+    addNum -> defination
+    result1 -> undefined
+    result2 -> undefined
+3.> Execution Phase
+    val1 <- 10
+    val2 <- 5
+    addNum -> newVariable environment + execution thread
+
+    // now here complete set box has been prepared for you here, so what happened with that box is these two will be there again. So Memory creation phase and execution phase will be execute for addNum.
+    // as many times we write the function  Memory creation and execution works. because global is deffined once
