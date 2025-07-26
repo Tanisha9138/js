@@ -58,3 +58,20 @@ let result2 = addNum(10,2)
 
     // now here complete set box has been prepared for you here, so what happened with that box is these two will be there again. So Memory creation phase and execution phase will be execute for addNum.
     // as many times we write the function  Memory creation and execution works. because global is deffined once
+
+.. In addNum new Execution Context is created
+
+Memory Phase =>
+    val1 -> undefined
+    val2 -> undefined
+    total -> undefined
+Execution Context =>
+    num1 <- 10
+    num2 <- 5
+    total <- 15
+
+Now the total value we have, we actually return it in our global Execution Context
+
+// Once the work of new Execution Context is complete, it will also be deleted
+
+Call Stack => follows LIFO context used to keep track of function execution Contexts.
