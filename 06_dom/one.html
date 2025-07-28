@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">DOM learning <span style="display: none;">test text</span></h1>
+        <h2> Lorem ipsum dolor sit.</h2>
+        <h2> Lorem ipsum dolor sit.</h2>
+        <h2> Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora, inventore ipsum. Error maiores dolores doloremque sit quidem aperiam, beatae ducimus at, non dolor ipsa unde sunt ex eaque ut rem?</p>
+        <input type="password">
+        <ul>
+            <li class = "list-item">one</li>
+            <li class = "list-item">two</li>
+            <li class = "list-item">three</li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<!-- Difference b/w innerText, textContent & innerHTML:
+ innerText => show only the text which is actually visible to the user, it does not include hidden elements.
+ textContent => show all the text, including the hidden elements.
+ innerHTML => innerHTML is a property of DOM elements that allows you to get or set the HTML content inside an element — including tags, text, and nested elements.
+innerText and textContent are similar, but innerText is more performance-intensive as it has to consider the CSS styles and visibility of elements, while textContent simply retrieves the text without any formatting considerations. -->
+ 
