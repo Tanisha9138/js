@@ -2,7 +2,7 @@ const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 // const newNums = myNums.map( (num) => num + 10)  // it automatically returns the value
 
-// channing method
+// chaining method
 const newNums = myNums 
                 .map( (num) => num * 10 )   // map returns everything but filter is like true or false
                 .map( (num) => num + 1)
