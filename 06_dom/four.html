@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // add elements in list
+    function addLanguage(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    // optimize way of doing same thing bcz in this we have to traverse whole tree
+
+    function addOptiLanguage(langName){
+        const li = document.createElement('li')
+        const addText =document.createTextNode(langName)
+        li.appendChild(addText)
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("cpp")
+    addOptiLanguage("ruby")
+
+    // edit elements in list
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "Mojo"  not an optimized approach
+    const newli = document.createElement('li')
+    newli.textContent = "Mojo"    // first we create the element we can use appendChild as well
+    secondLang.replaceWith(newli)
+
+    // second way of edit the elements
+
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    // Remove elements from list
+    const lastLang = document.querySelector('li:last-child')
+    lastLang.remove()
+</script>
+</html>
