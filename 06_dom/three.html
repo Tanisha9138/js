@@ -1,0 +1,32 @@
+<!-- How do we create a nodeList programmatically -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div');
+    console.log(div)
+    // now we add properties in this div element. like sometimes we have to add a classname, sometimes an id,
+    // so as we have seen every element inside this is individually nodelist & inside it all value are available from array to id classes everything. but those values are not set
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)   // just for fun we generate random id else we can just give any name
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Hello"
+    // we prefer setattribute option more because the dot class name or dot innertext it actually overwrites the value
+    const addText = document.createTextNode("Hello")
+    div.appendChild(addText)  // both are correct appendchild and innerText
+  
+    // now we create div into memory for it's visibility on browser. how will it be displayed on the page, we attach this child now we see how attaching happens
+    document.body.appendChild(div)
+
+</script>
+</html>
